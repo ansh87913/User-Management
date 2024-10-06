@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -56,8 +56,8 @@ const UserList = ({ users, setUsers }) => {
           </tr>
         </thead>
         <tbody>
-          {users.map(user => (
-            <tr key={user.id} style={{ backgroundColor: "LightBlue" }}>
+          {users.map((user, index) => (
+            <tr key={user.id} style={{ backgroundColor: index % 2 === 0 ? "lightBlue" : "pink" }}>
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{user.phone}</td>
